@@ -21,6 +21,11 @@ import (
 	"io"
 )
 
+// Higher verbosity means the message is less important
+var LogLevelDebug int = 3
+var LogLevelWarn int = 2
+var LogLevelError int = 1
+
 type Logger interface {
 	Println(format string, a ...interface{})
 	Printf(format string, a ...interface{})
